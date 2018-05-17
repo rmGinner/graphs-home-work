@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GraphsApi/GraphsApi.iml" filepath="$PROJECT_DIR$/GraphsApi/GraphsApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorkImplementation/HomeWorkImplementation.iml" filepath="$PROJECT_DIR$/HomeWorkImplementation/HomeWorkImplementation.iml" />
       <module fileurl="file://$PROJECT_DIR$/graphs-home-work.iml" filepath="$PROJECT_DIR$/graphs-home-work.iml" />
     </modules>
   </component>

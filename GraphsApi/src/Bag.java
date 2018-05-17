@@ -50,19 +50,14 @@ import java.util.NoSuchElementException;
  *
  *  @param <Item> the generic type of an item in this bag
  */
-public class Bag<Item, Value> implements Iterable<Item> {
-    private Node<Item,Value> first;    // beginning of bag
+public class Bag<Item> implements Iterable<Item> {
+    private Node<Item> first;    // beginning of bag
     private int n;               // number of elements in bag
 
     // helper linked list class
-    private static class Node<Item,Value> {
+    private static class Node<Item> {
         private Item item;
-        private Value value;
-        private Node<Item, Value> next;
-
-        public Node(Value value){
-            this.value = value;
-        }
+        private Node<Item> next;
     }
 
     /**
@@ -97,9 +92,9 @@ public class Bag<Item, Value> implements Iterable<Item> {
      *
      * @param  item the item to add to this bag
      */
-    public void add(Item item, Value value) {
-        Node<Item, Value> oldfirst = first;
-        first = new Node<>(value);
+    public void add(Item item) {
+        Node<Item> oldfirst = first;
+        first = new Node<Item>();
         first.item = item;
         first.next = oldfirst;
         n++;
@@ -112,14 +107,14 @@ public class Bag<Item, Value> implements Iterable<Item> {
      * @return an iterator that iterates over the items in this bag in arbitrary order
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator<>(first);
+        return new ListIterator<Item>(first);  
     }
 
     // an iterator, doesn't implement remove() since it's optional
-    private class ListIterator<Item, Value> implements Iterator<Item> {
-        private Node<Item, Value> current;
+    private class ListIterator<Item> implements Iterator<Item> {
+        private Node<Item> current;
 
-        public ListIterator(Node<Item, Value> first) {
+        public ListIterator(Node<Item> first) {
             current = first;
         }
 
@@ -139,17 +134,17 @@ public class Bag<Item, Value> implements Iterable<Item> {
      *
      * @param args the command-line arguments
      */
-//    public static void main(String[] args) {
-//        Bag<String> bag = new Bag<String>();
-//        while (!StdIn.isEmpty()) {
-//            String item = StdIn.readString();
-//            bag.add(item);
-//        }
-//
-//        StdOut.println("size of bag = " + bag.size());
-//        for (String s : bag) {
-//            StdOut.println(s);
-//        }
-//    }
+    public static void main(String[] args) {
+        Bag<String> bag = new Bag<String>();
+        while (!StdIn.isEmpty()) {
+            String item = StdIn.readString();
+            bag.add(item);
+        }
+
+        StdOut.println("size of bag = " + bag.size());
+        for (String s : bag) {
+            StdOut.println(s);
+        }
+    }
 
 }

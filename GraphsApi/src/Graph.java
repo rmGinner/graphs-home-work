@@ -34,7 +34,9 @@
  *  
  ******************************************************************************/
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.NoSuchElementException;
+import java.util.Set;
 
 /**
  *  The {@code Graph} class represents an undirected graph of vertices
@@ -65,7 +67,7 @@ public class Graph {
 
     private final int V;
     private int E;
-    private Bag<Integer,Map<String,Integer>>[] adj;
+    private Bag<Integer>[] adj;
     
     /**
      * Initializes an empty graph with {@code V} vertices and 0 edges.
@@ -78,9 +80,9 @@ public class Graph {
         if (V < 0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
         this.V = V;
         this.E = 0;
-        adj = (Bag<Integer,Map<String,Integer>>[]) new Bag[V];
+        adj = (Bag<Integer>[]) new Bag[V];
         for (int v = 0; v < V; v++) {
-            adj[v] = new Bag<>();
+            adj[v] = new Bag<Integer>();
         }
     }
 
@@ -99,9 +101,9 @@ public class Graph {
         try {
             this.V = in.readInt();
             if (V < 0) throw new IllegalArgumentException("number of vertices in a Graph must be nonnegative");
-            adj = (Bag<Integer,Map<String,Integer>>[]) new Bag[V];
+            adj = (Bag<Integer>[]) new Bag[V];
             for (int v = 0; v < V; v++) {
-                adj[v] = new Bag<>();
+                adj[v] = new Bag<Integer>();
             }
             int E = in.readInt();
             if (E < 0) throw new IllegalArgumentException("number of edges in a Graph must be nonnegative");
@@ -134,7 +136,7 @@ public class Graph {
                 reverse.push(w);
             }
             for (int w : reverse) {
-                adj[v].add(w, new HashMap<>());
+                adj[v].add(w);
             }
         }
     }
@@ -174,7 +176,7 @@ public class Graph {
         validateVertex(v);
         validateVertex(w);
         E++;
-        adj[v].add(w, adj[w].);
+        adj[v].add(w);
         adj[w].add(v);
     }
 

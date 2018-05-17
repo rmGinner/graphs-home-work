@@ -2,36 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa3b9b16-d6b9-40d0-b4f4-467098e369b7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/GraphsApi/GraphsApi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/AdjMatrixGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Bag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/BreadthFirstDirectedPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/BreadthFirstPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/DepthFirstDirectedPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Digraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/DirectedDFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/In.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Out.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/RecursiveGraphDFPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/RecursiveGraphDFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/StdIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/StdOut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/StdRandom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/WebCrawler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWorkImplementation/HomeWorkImplementation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0100.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0400.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0600.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0800.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso1000.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Cycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/DepthFirstOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/DigraphGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/DirectedCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/SymbolDigraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Topological.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/es.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphsApi/src/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/Bag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphsApi/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0100.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0200.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0200.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0400.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0400.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0600.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0600.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0800.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0800.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso1000.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso1000.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,48 +30,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java">
+      <file leaf-file-name="SymbolGraph.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            <state relative-caret-position="543">
+              <caret line="219" column="39" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GraphsApi/src/Graph.java">
+      <file leaf-file-name="SymbolDigraph.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolDigraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="176" column="29" selection-start-line="176" selection-start-column="29" selection-end-line="176" selection-end-column="29" />
+            <state relative-caret-position="748">
+              <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
               <folding>
-                <element signature="e#5152#5153#0" expanded="true" />
-                <element signature="e#5176#5177#0" expanded="true" />
-                <element signature="e#5320#5321#0" expanded="true" />
-                <element signature="e#5344#5345#0" expanded="true" />
+                <element signature="e#5697#5698#0" expanded="true" />
+                <element signature="e#5725#5726#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bag.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GraphsApi/src/Bag.java">
+      <file leaf-file-name="DepthFirstOrder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GraphsApi/src/DepthFirstOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="96" column="6" lean-forward="true" selection-start-line="96" selection-start-column="6" selection-end-line="97" selection-end-column="47" />
-              <folding>
-                <element signature="e#1891#1892#0" expanded="true" />
-                <element signature="e#1933#1934#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="242" column="10" selection-start-line="242" selection-start-column="10" selection-end-line="242" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectedCycle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GraphsApi/src/DirectedCycle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Topological.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GraphsApi/src/Topological.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="154" column="57" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="caso0100.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0100.txt">
+        <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            <state>
+              <caret column="3" selection-start-column="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -97,14 +97,21 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>symbol</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/GraphsApi/src/Bag.java" />
+        <option value="$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java" />
         <option value="$PROJECT_DIR$/GraphsApi/src/Graph.java" />
+        <option value="$PROJECT_DIR$/GraphsApi/src/Bag.java" />
+        <option value="$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java" />
       </list>
     </option>
   </component>
@@ -128,9 +135,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,13 +165,12 @@
               <item name="graphs-home-work" type="b2602c69:ProjectViewProjectNode" />
               <item name="graphs-home-work" type="462c0819:PsiDirectoryNode" />
               <item name="HomeWorkImplementation" type="462c0819:PsiDirectoryNode" />
-              <item name="casost2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -177,12 +183,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10086628\Desktop\graphs-home-work\GraphsApi\src" />
+      <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation\casost2" />
       <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\10086628\Desktop\graphs-home-work\GraphsApi\src" />
+      <recent name="C:\Users\10086628\Desktop\graphs-home-work\GraphsApi" />
+      <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation" />
+      <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -200,6 +210,11 @@
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="SymbolGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SymbolGraph" />
+      <module name="GraphsApi" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -242,6 +257,11 @@
       <properties />
       <listeners />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SymbolGraph" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -256,108 +276,81 @@
       <workItem from="1525708793561" duration="1686000" />
       <workItem from="1526310227678" duration="118000" />
       <workItem from="1526310527083" duration="3560000" />
+      <workItem from="1526572985299" duration="1289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3316000" />
+    <option name="totallyTimeSpent" value="4605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Messages" weight="0.3298292" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298292" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24930556" />
+      <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Nl-Palette" order="3" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info anchor="right" id="Properties" order="4" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39947438" />
+      <window_info anchor="right" id="Properties" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="Nl-Palette" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java</url>
+          <line>207</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java</url>
+          <line>208</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java</url>
+          <line>209</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Digraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4488">
-          <caret line="264" column="46" lean-forward="true" selection-start-line="264" selection-start-column="46" selection-end-line="264" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="18" lean-forward="true" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdjMatrixGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-935">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Digraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="315" column="42" lean-forward="true" selection-start-line="315" selection-start-column="42" selection-end-line="315" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GraphsApi/src/StdRandom.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -365,34 +358,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0100.txt">
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2992">
+          <caret line="176" column="29" selection-start-line="176" selection-start-column="29" selection-end-line="176" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/Bag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="96" column="6" lean-forward="true" selection-start-line="96" selection-start-column="6" selection-end-line="97" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Digraph.java" />
+    <entry file="file://$PROJECT_DIR$/src/Graph.java" />
+    <entry file="file://$PROJECT_DIR$/src/AdjMatrixGraph.java" />
+    <entry file="file://$PROJECT_DIR$/src/Digraph.java" />
+    <entry file="file://$PROJECT_DIR$/src/Graph.java" />
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/StdRandom.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/DepthFirstOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="242" column="10" selection-start-line="242" selection-start-column="10" selection-end-line="242" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/DirectedCycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/Topological.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="154" column="57" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolDigraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+          <folding>
+            <element signature="e#5697#5698#0" expanded="true" />
+            <element signature="e#5725#5726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/es.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="176" column="29" selection-start-line="176" selection-start-column="29" selection-end-line="176" selection-end-column="29" />
-          <folding>
-            <element signature="e#5152#5153#0" expanded="true" />
-            <element signature="e#5176#5177#0" expanded="true" />
-            <element signature="e#5320#5321#0" expanded="true" />
-            <element signature="e#5344#5345#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="351">
+          <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/Bag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="96" column="6" lean-forward="true" selection-start-line="96" selection-start-column="6" selection-end-line="97" selection-end-column="47" />
-          <folding>
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1933#1934#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-68">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/WebCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="219" column="39" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="40" />
         </state>
       </provider>
     </entry>

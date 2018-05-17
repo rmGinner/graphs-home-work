@@ -40,12 +40,12 @@
  */
 import java.util.HashMap;
 
-public class SymbolDigraph {
+public class SymbolCustomDigraph {
     private HashMap<String, Integer> st;  // string -> index
     private String[] keys;           // index  -> string
     private Digraph graph;           // the underlying digraph
 
-    /**  
+    /**
      * Initializes a digraph from a file using the specified delimiter.
      * Each line in the file contains
      * the name of a vertex, followed by a list of the names
@@ -53,18 +53,33 @@ public class SymbolDigraph {
      * @param filename the name of the file
      * @param delimiter the delimiter between fields
      */
-    public SymbolDigraph(String filename, String delimiter) {
+    public SymbolCustomDigraph(String filename, String delimiter) {
         st = new HashMap<String, Integer>();
 
         // First pass builds the index by reading strings to associate
         // distinct strings with an index
         In in = new In(filename);
-        while (in.hasNextLine()) {
-            String[] a = in.readLine().split(delimiter);
-            for (int i = 0; i < a.length; i++) {
-                if (!st.containsKey(a[i]))
-                    st.put(a[i], st.size());
-            }
+
+        Integer totalVertexes = 0;
+
+        try {
+             totalVertexes = Integer.valueOf(in.readLine());
+        }catch (Exception e){
+            throw new IllegalArgumentException("Erro ao armazenar total de vertices: Não é um número.");
+        }
+
+        int i = 0;
+        String[] aux = new String[1];
+
+        while (i < totalVertexes) {
+            aux = new String[totalVertexes];
+            aux[i] = in.readLine();
+            i++;
+        }
+
+        for (i = 0; i < totalVertexes; i++) {
+            if (!st.containsKey(aux[i]))
+                st.put(aux[i], i);
         }
 
         // inverted index to get string keys in an aray
@@ -75,12 +90,21 @@ public class SymbolDigraph {
 
         // second pass builds the digraph by connecting first vertex on each
         // line to all others
-        graph = new Digraph(st.size());
-        in = new In(filename);
+        graph = new Digraph(totalVertexes);
+
+        Integer totalEdges = 0;
+        try {
+            totalVertexes = Integer.valueOf(in.readLine());
+        }catch (Exception e){
+            throw new IllegalArgumentException("Erro ao armazenar total de vertices: Não é um número.");
+        }
+
         while (in.hasNextLine()) {
-            String[] a = in.readLine().split(delimiter);
+            String[] a = in.readLine().split(" ");
             int v = st.get(a[0]);
-            for (int i = 1; i < a.length; i++) {
+
+
+            for (i = 1; i < a.length; i++) {
                 int w = st.get(a[i]);
                 graph.addEdge(v, w);
             }

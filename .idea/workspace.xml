@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa3b9b16-d6b9-40d0-b4f4-467098e369b7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Cycle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/DepthFirstOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/DigraphGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/DirectedCycle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/SymbolDigraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/Topological.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/es.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphsApi/src/SymbolCustomDigraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphsApi/src/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/Bag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphsApi/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0100.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0200.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0200.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0400.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0400.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0600.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0600.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso0800.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso0800.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/casost2/caso1000.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/casost2/caso1000.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/HomeWorkImplementation.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraphsApi/src/FileReader.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SymbolGraph.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SymbolGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="219" column="39" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="40" />
+            <state relative-caret-position="170">
+              <caret line="80" column="56" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -42,8 +30,8 @@
       <file leaf-file-name="SymbolDigraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolDigraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+            <state relative-caret-position="221">
+              <caret line="74" selection-end-line="189" />
               <folding>
                 <element signature="e#5697#5698#0" expanded="true" />
                 <element signature="e#5725#5726#0" expanded="true" />
@@ -52,38 +40,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepthFirstOrder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GraphsApi/src/DepthFirstOrder.java">
+      <file leaf-file-name="SymbolCustomDigraph.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolCustomDigraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="242" column="10" selection-start-line="242" selection-start-column="10" selection-end-line="242" selection-end-column="10" />
+            <state relative-caret-position="476">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
+              <folding>
+                <element signature="e#3626#3627#0" expanded="true" />
+                <element signature="e#3666#3667#0" expanded="true" />
+                <element signature="e#3998#3999#0" expanded="true" />
+                <element signature="e#4030#4031#0" expanded="true" />
+                <element signature="e#4291#4292#0" expanded="true" />
+                <element signature="e#4323#4324#0" expanded="true" />
+                <element signature="e#5525#5526#0" expanded="true" />
+                <element signature="e#5553#5554#0" expanded="true" />
+                <element signature="e#5799#5800#0" expanded="true" />
+                <element signature="e#5827#5828#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirectedCycle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GraphsApi/src/DirectedCycle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Topological.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GraphsApi/src/Topological.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="154" column="57" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="caso0100.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt">
+      <file leaf-file-name="FileReader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GraphsApi/src/FileReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="3" selection-start-column="3" selection-end-column="3" />
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -112,6 +94,8 @@
         <option value="$PROJECT_DIR$/GraphsApi/src/Graph.java" />
         <option value="$PROJECT_DIR$/GraphsApi/src/Bag.java" />
         <option value="$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java" />
+        <option value="$PROJECT_DIR$/HomeWorkImplementation/src/SymbolCustomDigraph.java" />
+        <option value="$PROJECT_DIR$/GraphsApi/src/SymbolCustomDigraph.java" />
       </list>
     </option>
   </component>
@@ -135,9 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,18 +140,17 @@
             <path>
               <item name="graphs-home-work" type="b2602c69:ProjectViewProjectNode" />
               <item name="graphs-home-work" type="462c0819:PsiDirectoryNode" />
-              <item name="HomeWorkImplementation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graphs-home-work" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graphs-home-work" type="462c0819:PsiDirectoryNode" />
-              <item name="HomeWorkImplementation" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphsApi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="casost2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,16 +163,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\10086628\Desktop\graphs-home-work\GraphsApi\src" />
-      <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation\casost2" />
-      <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\10086628\Desktop\graphs-home-work\GraphsApi\src" />
       <recent name="C:\Users\10086628\Desktop\graphs-home-work\GraphsApi" />
       <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation" />
       <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10086628\Desktop\graphs-home-work\GraphsApi\src" />
+      <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation\casost2" />
+      <recent name="C:\Users\10086628\Desktop\graphs-home-work\HomeWorkImplementation" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,9 +190,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SymbolDigraph">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="SymbolDigraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SymbolDigraph" />
+      <module name="GraphsApi" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="SymbolGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SymbolGraph" />
@@ -257,8 +245,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.SymbolGraph" />
+      <item itemvalue="Application.SymbolDigraph" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SymbolDigraph" />
         <item itemvalue="Application.SymbolGraph" />
       </list>
     </recent_temporary>
@@ -277,19 +270,19 @@
       <workItem from="1526310227678" duration="118000" />
       <workItem from="1526310527083" duration="3560000" />
       <workItem from="1526572985299" duration="1289000" />
+      <workItem from="1526592293175" duration="3479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4605000" />
+    <option name="totallyTimeSpent" value="8084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.3298292" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3298292" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -298,25 +291,25 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3298292" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298292" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24930556" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20972222" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298292" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39947438" />
-      <window_info anchor="right" id="Properties" order="4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info id="Nl-Palette" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Properties" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +344,53 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java">
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3723">
+          <caret line="219" column="39" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolDigraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+          <folding>
+            <element signature="e#5697#5698#0" expanded="true" />
+            <element signature="e#5725#5726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/DepthFirstOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4114">
+          <caret line="242" column="10" selection-start-line="242" selection-start-column="10" selection-end-line="242" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/DirectedCycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/Topological.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="154" column="57" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="23" selection-start-column="23" selection-end-column="23" />
@@ -387,47 +426,26 @@
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/StdRandom.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/DepthFirstOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="3485">
           <caret line="242" column="10" selection-start-line="242" selection-start-column="10" selection-end-line="242" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/DirectedCycle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="918">
           <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/Topological.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="2074">
           <caret line="154" column="57" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolDigraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
-          <folding>
-            <element signature="e#5697#5698#0" expanded="true" />
-            <element signature="e#5725#5726#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/es.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -443,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HomeWorkImplementation/src/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/WebCrawler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51" />
@@ -457,8 +468,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="219" column="39" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="40" />
+        <state relative-caret-position="170">
+          <caret line="80" column="56" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolDigraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="74" selection-end-line="189" />
+          <folding>
+            <element signature="e#5697#5698#0" expanded="true" />
+            <element signature="e#5725#5726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/SymbolCustomDigraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+          <folding>
+            <element signature="e#3626#3627#0" expanded="true" />
+            <element signature="e#3666#3667#0" expanded="true" />
+            <element signature="e#3998#3999#0" expanded="true" />
+            <element signature="e#4030#4031#0" expanded="true" />
+            <element signature="e#4291#4292#0" expanded="true" />
+            <element signature="e#4323#4324#0" expanded="true" />
+            <element signature="e#5525#5526#0" expanded="true" />
+            <element signature="e#5553#5554#0" expanded="true" />
+            <element signature="e#5799#5800#0" expanded="true" />
+            <element signature="e#5827#5828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15363">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0200.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44705" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0400.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129008" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-235054" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso0800.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/caso1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-508584" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/casost2/es.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphsApi/src/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>

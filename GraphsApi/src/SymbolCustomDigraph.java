@@ -38,10 +38,23 @@
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  */
-import java.util.HashMap;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SymbolCustomDigraph {
     private HashMap<String, Integer> st;  // string -> index
+    private Map<String, Long> totalRelationshipUsages;
+    //Key of the first map is the name of vertex.
+    //Total cost with adjacent vertexes calc as map value.
+    private Map<String, Long> costByVertex;
+    private Map<String, Integer> totalVertexRelationshipOcurrences;
+    private BigInteger totalProjectCost = BigInteger.ZERO;
     private String[] keys;           // index  -> string
     private Digraph graph;           // the underlying digraph
 
@@ -51,10 +64,12 @@ public class SymbolCustomDigraph {
      * the name of a vertex, followed by a list of the names
      * of the vertices adjacent to that vertex, separated by the delimiter.
      * @param filename the name of the file
-     * @param delimiter the delimiter between fields
      */
-    public SymbolCustomDigraph(String filename, String delimiter) {
+    public SymbolCustomDigraph(String filename) {
         st = new HashMap<String, Integer>();
+        totalRelationshipUsages = new HashMap<>();
+        totalVertexRelationshipOcurrences = new HashMap<>();
+        costByVertex = new HashMap<>();
 
         // First pass builds the index by reading strings to associate
         // distinct strings with an index
@@ -69,11 +84,20 @@ public class SymbolCustomDigraph {
         }
 
         int i = 0;
-        String[] aux = new String[1];
+        String[] aux = new String[totalVertexes];
+        String[] vertexNameAndCost = getInitialVertex(filename);
+        aux[0] = vertexNameAndCost[0];
+        costByVertex.put(aux[0], Long.valueOf(vertexNameAndCost[1].trim()));
 
         while (i < totalVertexes) {
-            aux = new String[totalVertexes];
-            aux[i] = in.readLine();
+            vertexNameAndCost = in.readLine().split(" ");
+
+            if(vertexNameAndCost[0].trim().equals(aux[0])){
+                continue;
+            }
+
+            aux[i] = vertexNameAndCost[0].trim();
+            costByVertex.put(aux[i],Long.valueOf(vertexNameAndCost[1].trim()));
             i++;
         }
 
@@ -94,21 +118,71 @@ public class SymbolCustomDigraph {
 
         Integer totalEdges = 0;
         try {
-            totalVertexes = Integer.valueOf(in.readLine());
+            totalEdges = Integer.valueOf(in.readLine().trim());
         }catch (Exception e){
             throw new IllegalArgumentException("Erro ao armazenar total de vertices: Não é um número.");
         }
 
         while (in.hasNextLine()) {
             String[] a = in.readLine().split(" ");
-            int v = st.get(a[0]);
+            int v = st.get(a[0].trim());
+            int w = st.get(a[1].trim());
 
+            graph.addEdge(v, w);
 
-            for (i = 1; i < a.length; i++) {
-                int w = st.get(a[i]);
-                graph.addEdge(v, w);
-            }
+            Integer count = totalVertexRelationshipOcurrences.containsKey(a[0].trim()) ? totalVertexRelationshipOcurrences.get(a[0].trim()) + 1 : 1;
+
+            totalVertexRelationshipOcurrences.put(a[0].trim(), count);
+
+            totalRelationshipUsages.put(a[0]+"-"+a[1].trim(),Long.valueOf(a[2].trim()));
         }
+    }
+
+    public String[] getInitialVertex(String fileName){
+        Map<String,Integer> count = new HashMap<>();
+        Integer greater =  0;
+        String vertexName = null;
+
+        try(Stream<String> lines = Files.lines(Paths.get(fileName))){
+            BufferedReader bf = Files.newBufferedReader(Paths.get(fileName));
+            Integer linesToSkip = Integer.valueOf(bf.readLine().trim());
+
+            int i = 0;
+            for(String line : lines.skip(linesToSkip + 1).collect(Collectors.toList())){
+                if(i == 0){
+                    i++;
+                    continue;
+                }
+
+                String mainVertexName =  line.split(" ")[0];
+
+                count.put(mainVertexName, count.containsKey(mainVertexName) ? count.get(mainVertexName) +1 : 1);
+
+                i++;
+            }
+
+            for(Map.Entry<String,Integer> entry : count.entrySet()){
+                if(entry.getValue() > greater){
+                    vertexName = entry.getKey();
+                    greater = entry.getValue();
+                }
+            }
+
+            BufferedReader bf2 = Files.newBufferedReader(Paths.get(fileName));
+            Integer totalVertexes  = Integer.valueOf(bf2.readLine().trim());
+
+            while (totalVertexes > 0){
+                String[] currentVertexNameAndCost = bf2.readLine().trim().split(" ");
+
+                if(currentVertexNameAndCost[0].trim().equals(vertexName)){
+                    return currentVertexNameAndCost;
+                }
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     /**
@@ -136,7 +210,7 @@ public class SymbolCustomDigraph {
      * @param s the name of a vertex
      * @return the integer (between 0 and <em>V</em> - 1) associated with the vertex named {@code s}
      */
-    public int indexOf(String s) {
+    public Integer indexOf(String s) {
         return st.get(s);
     }
 
@@ -193,21 +267,27 @@ public class SymbolCustomDigraph {
             throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
     }
 
+    public Map<String, Long> getTotalRelationshipUsages() {
+        return totalRelationshipUsages;
+    }
+
+    public Map<String, Long> getCostByVertex() {
+        return costByVertex;
+    }
+
+    public void sumProjectCost(BigInteger cost){
+        totalProjectCost = totalProjectCost.add(cost);
+    }
+
+    public BigInteger getTotalProjectCost() {
+        return totalProjectCost;
+    }
+
     /**
      * Unit tests the {@code SymbolDigraph} data type.
      *
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        String filename  = args[0];
-        String delimiter = args[1];
-        SymbolDigraph sg = new SymbolDigraph(filename, delimiter);
-        Digraph graph = sg.digraph();
-        while (!StdIn.isEmpty()) {
-            String t = StdIn.readLine();
-            for (int v : graph.adj(sg.index(t))) {
-                StdOut.println("   " + sg.name(v));
-            }
-        }
     }
 }

@@ -104,6 +104,7 @@ public class DepthFirstOrder {
                 dfs(G, w);
             }
         }
+
         postorder.enqueue(v);
         reversePostorder.push(v);
         post[v] = postCounter++;

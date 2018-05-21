@@ -89,7 +89,11 @@ public class SymbolCustomDigraph {
         aux[0] = vertexNameAndCost[0];
         costByVertex.put(aux[0], Long.valueOf(vertexNameAndCost[1].trim()));
 
-        while (i < totalVertexes) {
+        i++;
+        int j = 0;
+
+        while (j < totalVertexes) {
+            j++;
             vertexNameAndCost = in.readLine().split(" ");
 
             if(vertexNameAndCost[0].trim().equals(aux[0])){

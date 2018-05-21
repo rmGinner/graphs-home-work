@@ -86,19 +86,18 @@ public class CustomDirectedDFS {
         for (int w : G.adj(v)) {
             if (!marked[w]){
                 dfs(G, w);
+            }
 
-                String secondVertexName = symbolCustomDigraph.nameOf(w);
+            String secondVertexName = symbolCustomDigraph.nameOf(w);
 
-                if(Objects.nonNull(secondVertexName)) {
-                    String firstVertexName = symbolCustomDigraph.nameOf(v);
-                    Long usesQuantity = symbolCustomDigraph.getTotalRelationshipUsages().get(firstVertexName+"-"+secondVertexName);
-                    Long firstVertexCost = symbolCustomDigraph.getCostByVertex().get(firstVertexName);
-                    Long secondVertexCost = symbolCustomDigraph.getCostByVertex().get(secondVertexName);
+            if(Objects.nonNull(secondVertexName)) {
+                String firstVertexName = symbolCustomDigraph.nameOf(v);
+                Long usesQuantity = symbolCustomDigraph.getTotalRelationshipUsages().get(firstVertexName+"-"+secondVertexName);
+                Long firstVertexCost = symbolCustomDigraph.getCostByVertex().get(firstVertexName);
+                Long secondVertexCost = symbolCustomDigraph.getCostByVertex().get(secondVertexName);
 
-                    Long calc = (secondVertexCost * usesQuantity) + firstVertexCost;
-                    symbolCustomDigraph.sumProjectCost(new BigInteger(calc.toString()));
-                }
-
+                Long calc = (secondVertexCost * usesQuantity) + firstVertexCost;
+                symbolCustomDigraph.sumProjectCost(new BigInteger(calc.toString()));
             }
         }
 

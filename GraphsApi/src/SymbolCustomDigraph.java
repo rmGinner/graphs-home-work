@@ -52,7 +52,7 @@ public class SymbolCustomDigraph {
     private Map<String, Long> totalRelationshipUsages;
     //Key of the first map is the name of vertex.
     //Total cost with adjacent vertexes calc as map value.
-    private Map<String, Long> costByVertex;
+    private Map<String, BigInteger> costByVertex;
     private Map<String, Integer> totalVertexRelationshipOcurrences;
     private BigInteger totalProjectCost = BigInteger.ZERO;
     private String[] keys;           // index  -> string
@@ -87,7 +87,7 @@ public class SymbolCustomDigraph {
         String[] aux = new String[totalVertexes];
         String[] vertexNameAndCost = getInitialVertex(filename);
         aux[0] = vertexNameAndCost[0];
-        costByVertex.put(aux[0], Long.valueOf(vertexNameAndCost[1].trim()));
+        costByVertex.put(aux[0], new BigInteger(vertexNameAndCost[1].trim()));
 
         i++;
         int j = 0;
@@ -101,7 +101,7 @@ public class SymbolCustomDigraph {
             }
 
             aux[i] = vertexNameAndCost[0].trim();
-            costByVertex.put(aux[i],Long.valueOf(vertexNameAndCost[1].trim()));
+            costByVertex.put(aux[i],new BigInteger(vertexNameAndCost[1].trim()));
             i++;
         }
 
@@ -275,7 +275,7 @@ public class SymbolCustomDigraph {
         return totalRelationshipUsages;
     }
 
-    public Map<String, Long> getCostByVertex() {
+    public Map<String, BigInteger> getCostByVertex() {
         return costByVertex;
     }
 

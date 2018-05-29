@@ -93,12 +93,16 @@ public class CustomDirectedDFS {
             if(Objects.nonNull(secondVertexName)) {
                 String firstVertexName = symbolCustomDigraph.nameOf(v);
                 Long usesQuantity = symbolCustomDigraph.getTotalRelationshipUsages().get(firstVertexName+"-"+secondVertexName);
-                Long firstVertexCost = symbolCustomDigraph.getCostByVertex().get(firstVertexName);
-                Long secondVertexCost = symbolCustomDigraph.getCostByVertex().get(secondVertexName);
+                BigInteger firstVertexCost = symbolCustomDigraph.getCostByVertex().get(firstVertexName);
+                BigInteger secondVertexCost = symbolCustomDigraph.getCostByVertex().get(secondVertexName);
 
-                Long calc = (secondVertexCost * usesQuantity) + firstVertexCost;
-                symbolCustomDigraph.sumProjectCost(new BigInteger(calc.toString()));
+                symbolCustomDigraph.getCostByVertex().put(firstVertexName,secondVertexCost.multiply(new BigInteger(usesQuantity.toString())).add(firstVertexCost));
             }
+        }
+
+        String name = symbolCustomDigraph.nameOf(v);
+        if(name.equals(symbolCustomDigraph.nameOf(0))) {
+            symbolCustomDigraph.sumProjectCost(symbolCustomDigraph.getCostByVertex().get(name));
         }
 
     }
@@ -152,7 +156,7 @@ public class CustomDirectedDFS {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-       SymbolCustomDigraph symbolCustomDigraph = new SymbolCustomDigraph(System.getProperty("user.dir") + "/GraphsApi/src" +"/casost2/sample-test.txt");
+       SymbolCustomDigraph symbolCustomDigraph = new SymbolCustomDigraph(System.getProperty("user.dir") + "/GraphsApi/src" +"/casost2/caso0800.txt");
 
        new CustomDirectedDFS(symbolCustomDigraph,0);
 

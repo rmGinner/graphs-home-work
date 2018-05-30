@@ -65,7 +65,7 @@ public class SymbolCustomDigraph {
      * of the vertices adjacent to that vertex, separated by the delimiter.
      * @param filename the name of the file
      */
-    public SymbolCustomDigraph(String filename) {
+    public SymbolCustomDigraph(String filename, String initialVertexName, String initialVertexValue) {
         st = new HashMap<String, Integer>();
         totalRelationshipUsages = new HashMap<>();
         totalVertexRelationshipOcurrences = new HashMap<>();
@@ -84,25 +84,40 @@ public class SymbolCustomDigraph {
         }
 
         int i = 0;
+
         String[] aux = new String[totalVertexes];
-        String[] vertexNameAndCost = getInitialVertex(filename);
-        aux[0] = vertexNameAndCost[0];
-        costByVertex.put(aux[0], new BigInteger(vertexNameAndCost[1].trim()));
+        if(initialVertexName != null ) {
 
-        i++;
-        int j = 0;
+            String[] vertexNameAndCost = new String[]{initialVertexName, initialVertexValue};
+            aux[0] = vertexNameAndCost[0];
+            costByVertex.put(aux[0], new BigInteger(vertexNameAndCost[1].trim()));
 
-        while (j < totalVertexes) {
-            j++;
-            vertexNameAndCost = in.readLine().split(" ");
-
-            if(vertexNameAndCost[0].trim().equals(aux[0])){
-                continue;
-            }
-
-            aux[i] = vertexNameAndCost[0].trim();
-            costByVertex.put(aux[i],new BigInteger(vertexNameAndCost[1].trim()));
             i++;
+            int j = 0;
+
+            while (j < totalVertexes) {
+                j++;
+                vertexNameAndCost = in.readLine().split(" ");
+
+                if (vertexNameAndCost[0].trim().equals(aux[0])) {
+                    continue;
+                }
+
+                aux[i] = vertexNameAndCost[0].trim();
+                costByVertex.put(aux[i], new BigInteger(vertexNameAndCost[1].trim()));
+                i++;
+            }
+        }else{
+            aux = new String[totalVertexes];
+            String[] vertexNameAndCost;
+            int j = 0;
+            while (j < totalVertexes) {
+                j++;
+                vertexNameAndCost = in.readLine().split(" ");
+                aux[i] = vertexNameAndCost[0].trim();
+                costByVertex.put(aux[i], new BigInteger(vertexNameAndCost[1].trim()));
+                i++;
+            }
         }
 
         for (i = 0; i < totalVertexes; i++) {
@@ -140,53 +155,6 @@ public class SymbolCustomDigraph {
 
             totalRelationshipUsages.put(a[0]+"-"+a[1].trim(),Long.valueOf(a[2].trim()));
         }
-    }
-
-    public String[] getInitialVertex(String fileName){
-        Map<String,Integer> count = new HashMap<>();
-        Integer greater =  0;
-        String vertexName = null;
-
-        try(Stream<String> lines = Files.lines(Paths.get(fileName))){
-            BufferedReader bf = Files.newBufferedReader(Paths.get(fileName));
-            Integer linesToSkip = Integer.valueOf(bf.readLine().trim());
-
-            int i = 0;
-            for(String line : lines.skip(linesToSkip + 1).collect(Collectors.toList())){
-                if(i == 0){
-                    i++;
-                    continue;
-                }
-
-                String mainVertexName =  line.split(" ")[0];
-
-                count.put(mainVertexName, count.containsKey(mainVertexName) ? count.get(mainVertexName) +1 : 1);
-
-                i++;
-            }
-
-            for(Map.Entry<String,Integer> entry : count.entrySet()){
-                if(entry.getValue() > greater){
-                    vertexName = entry.getKey();
-                    greater = entry.getValue();
-                }
-            }
-
-            BufferedReader bf2 = Files.newBufferedReader(Paths.get(fileName));
-            Integer totalVertexes  = Integer.valueOf(bf2.readLine().trim());
-
-            while (totalVertexes > 0){
-                String[] currentVertexNameAndCost = bf2.readLine().trim().split(" ");
-
-                if(currentVertexNameAndCost[0].trim().equals(vertexName)){
-                    return currentVertexNameAndCost;
-                }
-            }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-
-        return null;
     }
 
     /**

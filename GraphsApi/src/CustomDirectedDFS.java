@@ -156,9 +156,23 @@ public class CustomDirectedDFS {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-       SymbolCustomDigraph symbolCustomDigraph = new SymbolCustomDigraph(System.getProperty("user.dir") + "/GraphsApi/src" +"/casost2/caso0800.txt");
+        String file = System.getProperty("user.dir") + "/GraphsApi/src" +"/casost2/caso0800.txt";
 
-       new CustomDirectedDFS(symbolCustomDigraph,0);
+        SymbolCustomDigraph symbolCustomDigraph = new SymbolCustomDigraph(file,null,null);
+        Topological topological = new Topological(symbolCustomDigraph.digraph());
+
+        if(!topological.hasOrder()){
+            System.out.println("Este grafo contém ciclos e não é possível calcular o valor total.");
+            return;
+        }
+
+        Integer firstVertex = topological.order().iterator().next();
+        String nameOfFirstVertex = symbolCustomDigraph.nameOf(firstVertex);
+        BigInteger vertexCost = symbolCustomDigraph.getCostByVertex().get(nameOfFirstVertex);
+
+        symbolCustomDigraph = new SymbolCustomDigraph(file,nameOfFirstVertex,vertexCost.toString());
+
+        new CustomDirectedDFS(symbolCustomDigraph,0);
 
         System.out.println(symbolCustomDigraph.getTotalProjectCost());
     }

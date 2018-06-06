@@ -83,11 +83,51 @@ public class SymbolCustomDigraph {
             throw new IllegalArgumentException("Erro ao armazenar total de vertices: Não é um número.");
         }
 
-        int i = 0;
+        String[] aux = createMainNode(initialVertexName, initialVertexValue, in, totalVertexes);
 
+        for (int i = 0; i < totalVertexes; i++) {
+            if (!st.containsKey(aux[i]))
+                st.put(aux[i], i);
+        }
+
+        // inverted index to get string keys in an aray
+        keys = new String[st.size()];
+        for (String name : st.keySet()) {
+            keys[st.get(name)] = name;
+        }
+
+        // second pass builds the digraph by connecting first vertex on each
+        // line to all others
+        graph = new Digraph(totalVertexes);
+
+        Integer totalEdges = 0;
+        try {
+            totalEdges = Integer.valueOf(in.readLine().trim());
+        }catch (Exception e){
+            throw new IllegalArgumentException("Erro ao armazenar total de vertices: Não é um número.");
+        }
+
+        while (in.hasNextLine()) {
+            String[] a = in.readLine().split(" ");
+            int v = st.get(a[0].trim());
+            int w = st.get(a[1].trim());
+
+            graph.addEdge(v, w);
+
+            fillRelationshipData(a);
+        }
+    }
+
+    private void fillRelationshipData(String[] a) {
+        Integer count = totalVertexRelationshipOcurrences.containsKey(a[0].trim()) ? totalVertexRelationshipOcurrences.get(a[0].trim()) + 1 : 1;
+        totalVertexRelationshipOcurrences.put(a[0].trim(), count);
+        totalRelationshipUsages.put(a[0]+"-"+a[1].trim(),Long.valueOf(a[2].trim()));
+    }
+
+    private String[] createMainNode(String initialVertexName, String initialVertexValue, In in, Integer totalVertexes) {
         String[] aux = new String[totalVertexes];
+        int i = 0;
         if(initialVertexName != null ) {
-
             String[] vertexNameAndCost = new String[]{initialVertexName, initialVertexValue};
             aux[0] = vertexNameAndCost[0];
             costByVertex.put(aux[0], new BigInteger(vertexNameAndCost[1].trim()));
@@ -119,42 +159,7 @@ public class SymbolCustomDigraph {
                 i++;
             }
         }
-
-        for (i = 0; i < totalVertexes; i++) {
-            if (!st.containsKey(aux[i]))
-                st.put(aux[i], i);
-        }
-
-        // inverted index to get string keys in an aray
-        keys = new String[st.size()];
-        for (String name : st.keySet()) {
-            keys[st.get(name)] = name;
-        }
-
-        // second pass builds the digraph by connecting first vertex on each
-        // line to all others
-        graph = new Digraph(totalVertexes);
-
-        Integer totalEdges = 0;
-        try {
-            totalEdges = Integer.valueOf(in.readLine().trim());
-        }catch (Exception e){
-            throw new IllegalArgumentException("Erro ao armazenar total de vertices: Não é um número.");
-        }
-
-        while (in.hasNextLine()) {
-            String[] a = in.readLine().split(" ");
-            int v = st.get(a[0].trim());
-            int w = st.get(a[1].trim());
-
-            graph.addEdge(v, w);
-
-            Integer count = totalVertexRelationshipOcurrences.containsKey(a[0].trim()) ? totalVertexRelationshipOcurrences.get(a[0].trim()) + 1 : 1;
-
-            totalVertexRelationshipOcurrences.put(a[0].trim(), count);
-
-            totalRelationshipUsages.put(a[0]+"-"+a[1].trim(),Long.valueOf(a[2].trim()));
-        }
+        return aux;
     }
 
     /**

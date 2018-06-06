@@ -88,23 +88,31 @@ public class CustomDirectedDFS {
                 dfs(G, w);
             }
 
-            String secondVertexName = symbolCustomDigraph.nameOf(w);
-
-            if(Objects.nonNull(secondVertexName)) {
-                String firstVertexName = symbolCustomDigraph.nameOf(v);
-                Long usesQuantity = symbolCustomDigraph.getTotalRelationshipUsages().get(firstVertexName+"-"+secondVertexName);
-                BigInteger firstVertexCost = symbolCustomDigraph.getCostByVertex().get(firstVertexName);
-                BigInteger secondVertexCost = symbolCustomDigraph.getCostByVertex().get(secondVertexName);
-
-                symbolCustomDigraph.getCostByVertex().put(firstVertexName,secondVertexCost.multiply(new BigInteger(usesQuantity.toString())).add(firstVertexCost));
-            }
+            calculateProjectCost(v, w);
         }
 
+        setTotalProjectCost(v);
+
+    }
+
+    private void setTotalProjectCost(int v) {
         String name = symbolCustomDigraph.nameOf(v);
         if(name.equals(symbolCustomDigraph.nameOf(0))) {
             symbolCustomDigraph.sumProjectCost(symbolCustomDigraph.getCostByVertex().get(name));
         }
+    }
 
+    private void calculateProjectCost(int v, int w) {
+        String secondVertexName = symbolCustomDigraph.nameOf(w);
+
+        if(Objects.nonNull(secondVertexName)) {
+            String firstVertexName = symbolCustomDigraph.nameOf(v);
+            Long usesQuantity = symbolCustomDigraph.getTotalRelationshipUsages().get(firstVertexName+"-"+secondVertexName);
+            BigInteger firstVertexCost = symbolCustomDigraph.getCostByVertex().get(firstVertexName);
+            BigInteger secondVertexCost = symbolCustomDigraph.getCostByVertex().get(secondVertexName);
+
+            symbolCustomDigraph.getCostByVertex().put(firstVertexName,secondVertexCost.multiply(new BigInteger(usesQuantity.toString())).add(firstVertexCost));
+        }
     }
 
     /**
@@ -156,20 +164,32 @@ public class CustomDirectedDFS {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        String file = System.getProperty("user.dir") + "/GraphsApi/src" +"/casost2/caso0800.txt";
+        String file = System.getProperty("user.dir") + "/GraphsApi/src" +"/casost2/caso1000.txt";
 
+        /**
+         * Identifica o vértice principal
+         * */
         SymbolCustomDigraph symbolCustomDigraph = new SymbolCustomDigraph(file,null,null);
         Topological topological = new Topological(symbolCustomDigraph.digraph());
 
+        /**
+         * Verifica se o grafo tem ordem (se não contém ciclos).
+         * */
         if(!topological.hasOrder()){
             System.out.println("Este grafo contém ciclos e não é possível calcular o valor total.");
             return;
         }
 
+        /**
+         * Obtém os dados do primeiro vértice.
+         * */
         Integer firstVertex = topological.order().iterator().next();
         String nameOfFirstVertex = symbolCustomDigraph.nameOf(firstVertex);
         BigInteger vertexCost = symbolCustomDigraph.getCostByVertex().get(nameOfFirstVertex);
 
+        /**
+         * Efetua o processo concreto do grafo (construção do grafo e cálculo dos valores).
+         * */
         symbolCustomDigraph = new SymbolCustomDigraph(file,nameOfFirstVertex,vertexCost.toString());
 
         new CustomDirectedDFS(symbolCustomDigraph,0);
